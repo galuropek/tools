@@ -1,21 +1,12 @@
 module ParamsParser
 
-  # boolean values for marking: param is required or not
-  @@params = {
-      file_path: [1, true],
-      mode: [1, true],
-      br_sep: [1, true],
-      col_sep: [1, false],
-      options: [2, false]
-  }
-
-  def get_params(argv)
+  def get_params(argv, params_settings)
     argv_is_empty?(argv)
+    @params_settings = params_settings
     params = {}
     cmd_line = argv.join(' ')
     commands = cmd_line.split('--').map(&:strip).select { |cmd| !cmd.empty? }
     commands.each do |cmd|
-      # recognize_command(cmd.split(' '), result)
       validated_params = param_validator(cmd)
       next unless validated_params
 
@@ -36,15 +27,11 @@ module ParamsParser
   def param_validator(cmd)
     params = params_from_cmd(cmd)
     param_name = params.first
-    if params_is_valid?(params)
-      {param_name => params}
-    else
-      false
-    end
+    params_is_valid?(params) ? {param_name => params} : false
   end
 
   def params_is_valid?(params)
-    params_count_expected = @@params[:"#{params.shift}"].first
+    params_count_expected = @params_settings[:"#{params.shift}"].first
     if params_count_expected
       params.count == params_count_expected
     else
@@ -61,7 +48,7 @@ module ParamsParser
 
   def get_required_params
     required_params = []
-    @@params.each { |key, value| required_params << key.to_s if value.last }
+    @params_settings.each { |key, value| required_params << key.to_s if value.last }
     required_params
   end
 
