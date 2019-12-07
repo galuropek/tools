@@ -17,7 +17,7 @@ module ParamsParser
   end
 
   def argv_is_empty?(argv)
-    raise print_message('Params is empty!') if argv.count < 1
+    raise print_message("\nParams is empty!") if argv.count < 1
   end
 
   # @param [String] cmd - line from ARGV (example: 'file_path Documents\test\CR.csv')
@@ -31,18 +31,19 @@ module ParamsParser
   end
 
   def params_is_valid?(params)
-    params_count_expected = @params_settings[:"#{params.shift}"].first
+    param_name = params.shift
+    settings_array = @params_settings[:"#{param_name}"]
+    params_count_expected = settings_array ? settings_array.first : nil
     if params_count_expected
       params.count == params_count_expected
     else
-      print_message("Params count more then #{params_count_expected}.")
-      false
+      raise print_message("\nPay attention, please! Param '--#{param_name}' not support.")
     end
   end
 
   def check_required_params(params)
     get_required_params.each do |req_param|
-      raise print_message("Required param '--#{req_param}' is not present.") unless params[req_param]
+      raise print_message("\nRequired param '--#{req_param}' is not present.") unless params[req_param]
     end
   end
 
@@ -62,3 +63,15 @@ module ParamsParser
     puts "#{message} Look read.me file for help."
   end
 end
+
+# Params settings example
+# {parameter: [parameter_count, is_required?]
+# boolean values for marking: param is required or not
+# PARAMS_SETTINGS = {
+#     file_path: [1, true],
+#     mode: [1, true],
+#     br_sep: [1, true],
+#     col_sep: [1, false],
+#     options: [2, false]
+# }
+
