@@ -49,7 +49,7 @@ module ParamsParser
       if params.count <= params_count_expected
         true
       else
-        raise print_message("Expected params count: #{params_count_expected}, current params count: #{params.count}.")
+        raise print_message("Incorrect param: #{param_name}\nExpected params count: #{params_count_expected}, current params count: #{params.count}.")
       end
     else
       raise print_message("Pay attention, please! Param '--#{param_name}' not support.")
@@ -66,15 +66,6 @@ module ParamsParser
     required_params = []
     @params_settings.each { |key, value| required_params << key.to_s if value.last }
     required_params
-  end
-
-  def parse_some_options(options)
-    # argv_line = argv.join(' ')
-    # return unless argv_line.include?('--options')
-    #
-    # options_line = argv_line.split('--options').last.strip
-    # options_line.empty? ? nil : options_line.split(' ').map(&:strip)
-
   end
 
   ##### Helpers
