@@ -1,15 +1,7 @@
+require_relative 'result_cr'
 require 'csv'
 
 module Utils
-
-  # @param [Array] argv
-  def parse_options(argv)
-    argv_line = argv.join(' ')
-    return unless argv_line.include?('--options')
-
-    options_line = argv_line.split('--options').last.strip
-    options_line.empty? ? nil : options_line.split(' ').map(&:strip)
-  end
 
   # @param [String] path - path to input csv file
   # @param [String] col_sep - column separator in csv file
@@ -29,7 +21,7 @@ module Utils
     hash
   end
 
-  def get_result(hash, breadcrumb_sep)
+  def get_hash_result(hash, breadcrumb_sep)
     result = {}
     if hash.count == 1
       raise "\nFile has not been parsed. Check col_sep or column names!"
@@ -83,5 +75,22 @@ module Utils
     urls.each { |url| print url + ' ' }
     print '--seed_path '
     breadcrumbs.each { |b| print b + ' ' }
+  end
+
+  def prepare_result(parsed_result)
+    cr_array = []
+    parsed_result.each do |key, value|
+      levels_array = value.keys
+      add_result(cr_array, levels_array, value, key)
+    end
+    cr_array
+  end
+
+  def add_result(cr_array, levels_array, values_array, retailer)
+    cr = ResultCR.new
+    cr.retailer = retailer
+    cr.levels = levels_array
+    cr.cats = values_array
+    cr_array << cr
   end
 end
