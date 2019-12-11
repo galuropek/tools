@@ -28,7 +28,7 @@ module ParamsParser
   end
 
   def argv_is_empty?(argv)
-    raise print_message("\nParams is empty!") if argv.count < 1
+    raise print_message("Params is empty!") if argv.count < 1
   end
 
   # @param [String] cmd - line from ARGV (example: 'file_path Documents\test\CR.csv')
@@ -46,15 +46,19 @@ module ParamsParser
     settings_array = @params_settings[:"#{param_name}"]
     params_count_expected = settings_array ? settings_array.first : nil
     if params_count_expected
-      params.count <= params_count_expected
+      if params.count <= params_count_expected
+        true
+      else
+        raise print_message("Expected params count: #{params_count_expected}, current params count: #{params.count}.")
+      end
     else
-      raise print_message("\nPay attention, please! Param '--#{param_name}' not support.")
+      raise print_message("Pay attention, please! Param '--#{param_name}' not support.")
     end
   end
 
   def check_required_params(params)
     get_required_params.each do |req_param|
-      raise print_message("\nRequired param '--#{req_param}' is not present.") unless params[req_param]
+      raise print_message("Required param '--#{req_param}' is not present.") unless params[req_param]
     end
   end
 
@@ -62,6 +66,15 @@ module ParamsParser
     required_params = []
     @params_settings.each { |key, value| required_params << key.to_s if value.last }
     required_params
+  end
+
+  def parse_some_options(options)
+    # argv_line = argv.join(' ')
+    # return unless argv_line.include?('--options')
+    #
+    # options_line = argv_line.split('--options').last.strip
+    # options_line.empty? ? nil : options_line.split(' ').map(&:strip)
+
   end
 
   ##### Helpers
