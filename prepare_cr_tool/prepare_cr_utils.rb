@@ -2,7 +2,7 @@ require 'csv'
 
 module Utils
 
-  # @param [Object] argv
+  # @param [Array] argv
   def parse_options(argv)
     argv_line = argv.join(' ')
     return unless argv_line.include?('--options')
@@ -32,7 +32,7 @@ module Utils
   def get_result(hash, breadcrumb_sep)
     result = {}
     if hash.count == 1
-      raise 'File has not been parsed. Check col_sep or column names!'
+      raise "\nFile has not been parsed. Check col_sep or column names!"
     end
 
     hash.keys.each do |key|
@@ -66,7 +66,7 @@ module Utils
       levels = cr_by_levels.keys
       levels.each do |lvl|
         parse_breadcrumb_for_cdm(cr_by_levels[lvl])
-        puts '--level' + lvl.to_s
+        puts '--level ' + lvl.to_s
       end
     end
   end
@@ -75,13 +75,13 @@ module Utils
     breadcrumbs = []
     urls = []
     cr_array.each do |breadcrumb|
-      splitted_cr = breadcrumb.split(': ')
-      breadcrumbs << splitted_cr.first
-      urls << splitted_cr.last
+      cr_after_split = breadcrumb.split(': ')
+      breadcrumbs << cr_after_split.first
+      urls << cr_after_split.last
     end
-    puts '--seed_url '
-    breadcrumbs.each { |b| puts b + ' ' }
-    puts '--seed_path '.chomp
-    urls.each { |url| puts url + ' ' }
+    print '--seed_url '
+    urls.each { |url| print url + ' ' }
+    print '--seed_path '
+    breadcrumbs.each { |b| print b + ' ' }
   end
 end

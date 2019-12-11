@@ -1,5 +1,16 @@
 module ParamsParser
 
+  # params_settings example
+  # {parameter: [parameter_count, is_required?]
+  # boolean values for marking: param is required or not
+  # PARAMS_SETTINGS = {
+  #     file_path: [1, true],
+  #     mode: [1, true],
+  #     br_sep: [1, true],
+  #     col_sep: [1, false],
+  #     options: [2, false]
+  # }
+
   def get_params(argv, params_settings)
     argv_is_empty?(argv)
     @params_settings = params_settings
@@ -35,7 +46,7 @@ module ParamsParser
     settings_array = @params_settings[:"#{param_name}"]
     params_count_expected = settings_array ? settings_array.first : nil
     if params_count_expected
-      params.count == params_count_expected
+      params.count <= params_count_expected
     else
       raise print_message("\nPay attention, please! Param '--#{param_name}' not support.")
     end
@@ -63,15 +74,4 @@ module ParamsParser
     puts "#{message} Look read.me file for help."
   end
 end
-
-# Params settings example
-# {parameter: [parameter_count, is_required?]
-# boolean values for marking: param is required or not
-# PARAMS_SETTINGS = {
-#     file_path: [1, true],
-#     mode: [1, true],
-#     br_sep: [1, true],
-#     col_sep: [1, false],
-#     options: [2, false]
-# }
 

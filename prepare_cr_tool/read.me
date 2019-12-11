@@ -1,9 +1,10 @@
 required param:
-1) <file_path>
-2) <breadcrumb_separator>
+1) --file_path              path to CVS file, only CSV file with column headers: cat, url, retailer.
+2) --mode                   <for_job | for_shard> for_job - prepare for rr-jobs; for_shard - prepare for shard command.
+3) --br_sep                 breadcrumb separator from input CSV file like '***', '>', '|' etc.
 
-optional param
-3) <col_sep_of_input_csv_file> - default is '\t'
+optional param:
+4) --col_sep                column separator from input CSV file. If not present in command line, will be default col_sep '\t'.
 
 run example:
-ruby prepare_cr.rb 'documents/newFolder/file.csv' '>' ','
+ruby prepare_cr.rb --file_path documents/newFolder/file.csv --mode for_job --br_sep '>' --col_sep ','

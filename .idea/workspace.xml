@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dup finder tool/dup_finder.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dup finder tool/file_manager.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dup finder tool/helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare cr tool/prepare_cr.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare cr tool/prepare_cr_utils.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare cr tool/read.me" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare csv tool/prepare_csv.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare csv tool/prepare_utils.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/params.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/params.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/read.me" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +23,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/tmp.rb" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -43,6 +37,40 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Ruby.Run PrepareCR ">
+    <configuration name="Run PrepareCR " type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/prepare_cr_tool/prepare_cr.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --options cmd_for_shard --mode for_job" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run tmp" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/modules/tmp.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --options cmd_for_shard --mode for_shard" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Ruby.Run PrepareCR " />
+      <item itemvalue="Ruby.run tmp" />
+    </list>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
@@ -60,7 +88,31 @@
       <workItem from="1575578336809" duration="1792000" />
       <workItem from="1575580143580" duration="429000" />
       <workItem from="1575655691012" duration="254000" />
+      <workItem from="1575656350859" duration="15648000" />
+      <workItem from="1575708621893" duration="8538000" />
     </task>
+    <task id="LOCAL-00001" summary="Create ParamsParser">
+      <created>1575670491865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575670491865</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Done checking required params">
+      <created>1575671240637</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575671240637</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added a message if param is not supported and param_settings description. Fix bug when param is not present in param_settings hash.">
+      <created>1575710518917</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575710518917</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,10 +123,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create ParamsParser" />
+    <MESSAGE value="Done checking required params" />
+    <MESSAGE value="Added a message if param is not supported and param_settings description. Fix bug when param is not present in param_settings hash." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a message if param is not supported and param_settings description. Fix bug when param is not present in param_settings hash." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1575716759440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1575720967631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>
