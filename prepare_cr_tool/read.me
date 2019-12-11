@@ -4,7 +4,9 @@ required param:
 3) --br_sep                 breadcrumb separator from input CSV file like '***', '>', '|' etc.
 
 optional param:
-4) --col_sep                column separator from input CSV file. If not present in command line, will be default col_sep '\t'.
+4) --options                <print | file> print - print result; file - write result to file. If --options not present in command line
+                            result will be printed.
+5) --col_sep                column separator from input CSV file. If not present in command line, will be default col_sep '\t'.
 
 run example:
-ruby prepare_cr.rb --file_path documents/newFolder/file.csv --mode for_job --br_sep '>' --col_sep ','
+ruby prepare_cr.rb --file_path documents/newFolder/file.csv --mode for_job --br_sep '>' --col_sep ',' --options print
