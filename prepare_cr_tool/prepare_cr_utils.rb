@@ -3,6 +3,10 @@ require 'csv'
 
 module Utils
 
+  SEED_URL_PARAM = '--seed_url'
+  SEED_PATH_PARAM = '--seed_path'
+  LEVEL_PARAM = '--level'
+
   # @param [String] path - path to input csv file
   # @param [String] col_sep - column separator in csv file
   def get_table_csv(path, col_sep)
@@ -58,7 +62,7 @@ module Utils
       levels = cr_by_levels.keys
       levels.each do |lvl|
         parse_breadcrumb_for_cdm(cr_by_levels[lvl])
-        puts '--level ' + lvl.to_s
+        puts "#{LEVEL_PARAM} " + lvl.to_s
       end
     end
   end
@@ -71,9 +75,9 @@ module Utils
       breadcrumbs << cr_after_split.first
       urls << cr_after_split.last
     end
-    print '--seed_url '
+    print "#{SEED_URL_PARAM} "
     urls.each { |url| print url + ' ' }
-    print '--seed_path '
+    print "#{SEED_PATH_PARAM} "
     breadcrumbs.each { |b| print b + ' ' }
   end
 
@@ -92,5 +96,38 @@ module Utils
     cr.levels = levels_array
     cr.cats = values_array
     cr_array << cr
+  end
+
+  def print_result(result, mode)
+    case mode
+    when 'for_job'
+      print_result_for_job(result)
+    when 'for_shard'
+      print_result_for_shard(result)
+    else
+      puts "Incorrect mode: #{mode}. Look read.me file."
+    end
+  end
+
+  def print_result_for_job(result)
+    result.each do |cr|
+      puts cr.retailer
+      cr.levels.each do |lvl|
+        puts lvl
+        puts cr.cats[lvl]
+      end
+      puts
+    end
+  end
+
+  def print_result_for_shard(result)
+    result.each do |cr|
+      puts cr.retailer
+      cr.levels.each do |lvl|
+        parse_breadcrumb_for_cdm(cr.cats[lvl])
+        puts "#{LEVEL_PARAM} #{lvl}"
+      end
+      puts
+    end
   end
 end
