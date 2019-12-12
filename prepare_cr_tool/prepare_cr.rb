@@ -6,9 +6,6 @@ class PrepareCR
   include Utils
   include ParamsParser
 
-  SHARD = 'for_shard'
-  RR_JOBS = 'for_job'
-
   PARAMS_SETTINGS = {
       file_path: [1, true],
       mode: [1, true],
