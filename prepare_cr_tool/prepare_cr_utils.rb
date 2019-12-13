@@ -1,7 +1,10 @@
 require_relative 'result_cr'
+require_relative '../modules/file_manager'
 require 'csv'
 
 module Utils
+
+  include FileManager
 
   SEED_URL_PARAM = '--seed_url'
   SEED_PATH_PARAM = '--seed_path'
@@ -9,12 +12,18 @@ module Utils
 
   # @param [String] path - path to input csv file
   # @param [String] col_sep - column separator in csv file
-  def get_table_csv(path, col_sep)
-    CSV.parse(File.read(path), headers: true, col_sep: col_sep || "\t")
+  # def get_table_csv(path, col_sep)
+  #   CSV.parse(File.read(path), headers: true, col_sep: col_sep || "\t")
+  # end
+
+  def parse_input_file(path, col_sep)
+    hash = {}
+    table = get_table_csv(path, col_sep)
+    parse_table(table, hash)
+    hash
   end
 
-  def parse_table(table)
-    hash = {}
+  def parse_table(table, hash)
     table.each do |el|
       key = el['cat']
       attribute = el['url']

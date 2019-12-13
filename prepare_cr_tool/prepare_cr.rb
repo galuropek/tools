@@ -31,8 +31,7 @@ class PrepareCR
   end
 
   def run
-    table = get_table_csv(@file_path, @col_sep)
-    parsed_table = parse_table(table)
+    parsed_table = parse_input_file(@file_path, @col_sep)
     hash_result = get_hash_result(parsed_table, @br_sep)
 
     # return Array<ResultCR>: [ResultCR, ResultCR..., ResultCR]
