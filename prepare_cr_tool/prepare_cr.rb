@@ -44,7 +44,7 @@ class PrepareCR
     when 'print'
       print_result(result, @mode)
     when 'file'
-      # write_result(result, @mode)
+      write_result(result, @mode, @file_path)
     else
       print_message("Incorrect option: '#{action}'.")
     end

@@ -12,13 +12,9 @@ module Utils
 
   # @param [String] path - path to input csv file
   # @param [String] col_sep - column separator in csv file
-  # def get_table_csv(path, col_sep)
-  #   CSV.parse(File.read(path), headers: true, col_sep: col_sep || "\t")
-  # end
-
   def parse_input_file(path, col_sep)
     hash = {}
-    table = get_table_csv(path, col_sep)
+    table = get_table_from_csv(path, col_sep)
     parse_table(table, hash)
     hash
   end
@@ -122,7 +118,7 @@ module Utils
     result.each do |cr|
       puts cr.retailer
       cr.levels.each do |lvl|
-        puts lvl
+        puts "level: #{lvl}"
         puts cr.cats[lvl]
       end
       puts
@@ -137,6 +133,23 @@ module Utils
         puts "#{LEVEL_PARAM} #{lvl}"
       end
       puts
+    end
+  end
+
+  def write_result(result, mode, file_path)
+    file = File.open(file_path.gsub('.csv', '_result.txt'), "w")
+    result.each do |cr|
+      file.write("#{cr.retailer}\n")
+      cr.levels.each do |lvl|
+        file.write("level: #{lvl}\n")
+        # file.write("#{cr.cats[lvl]}\n")
+        cr.cats[lvl].each_with_index { |cat, index|
+          file.write("#{cat}")
+          file.write(",") if index < cr.cats[lvl].count - 1
+          file.write("\n")
+        }
+      end
+      file.write("\n")
     end
   end
 end
