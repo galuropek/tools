@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Changes for file_manager module">
+    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Added write option for job">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +57,7 @@
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/prepare_cr_tool/prepare_cr.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --mode for_job --options file print" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --mode for_shard --options file print" />
       <method v="2" />
     </configuration>
     <configuration name="run tmp" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -104,7 +102,11 @@
       <workItem from="1576262570923" duration="1765000" />
       <workItem from="1576264362989" duration="1212000" />
       <workItem from="1576266180057" duration="1781000" />
-      <workItem from="1576267987042" duration="1239000" />
+      <workItem from="1576267987042" duration="1397000" />
+      <workItem from="1576699299345" duration="88000" />
+      <workItem from="1577124788000" duration="301000" />
+      <workItem from="1580147435421" duration="1767000" />
+      <workItem from="1580149236359" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -190,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576266696760</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added write option for job">
+      <created>1576269383034</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576269383034</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,10 +231,11 @@
     <MESSAGE value="Clean prepare_cr" />
     <MESSAGE value="Common module for tools" />
     <MESSAGE value="Changes for file_manager module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes for file_manager module" />
+    <MESSAGE value="Added write option for job" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added write option for job" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1576264314884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1576269294762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1580149612159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>

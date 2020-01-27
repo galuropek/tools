@@ -66,13 +66,13 @@ module Utils
       cr_by_levels = result[key]
       levels = cr_by_levels.keys
       levels.each do |lvl|
-        parse_breadcrumb_for_cdm(cr_by_levels[lvl])
+        parse_breadcrumb_for_cmd(cr_by_levels[lvl], 'print')
         puts "#{LEVEL_PARAM} " + lvl.to_s
       end
     end
   end
 
-  def parse_breadcrumb_for_cdm(cr_array)
+  def parse_breadcrumb_for_cmd(cr_array, action, file = nil)
     breadcrumbs = []
     urls = []
     cr_array.each do |breadcrumb|
@@ -80,10 +80,24 @@ module Utils
       breadcrumbs << cr_after_split.first
       urls << cr_after_split.last
     end
-    print "#{SEED_URL_PARAM} "
-    urls.each { |url| print url + ' ' }
-    print "#{SEED_PATH_PARAM} "
-    breadcrumbs.each { |b| print b + ' ' }
+    case action
+    when 'print'
+      print "#{SEED_URL_PARAM} "
+      urls.each { |url| print url + ' ' }
+      print "#{SEED_PATH_PARAM} "
+      breadcrumbs.each { |b| print b + ' ' }
+    when 'file'
+      if file
+        file.write("#{SEED_URL_PARAM} ")
+        urls.each { |url| file.write url + ' ' }
+        file.write("#{SEED_PATH_PARAM} ")
+        breadcrumbs.each { |b| file.write b + ' ' }
+      else
+        puts 'Problem with output-file.'
+      end
+    else
+      puts 'Unknown action.'
+    end
   end
 
   def prepare_result(parsed_result)
@@ -129,7 +143,7 @@ module Utils
     result.each do |cr|
       puts cr.retailer
       cr.levels.each do |lvl|
-        parse_breadcrumb_for_cdm(cr.cats[lvl])
+        parse_breadcrumb_for_cmd(cr.cats[lvl], 'print')
         puts "#{LEVEL_PARAM} #{lvl}"
       end
       puts
@@ -137,6 +151,17 @@ module Utils
   end
 
   def write_result(result, mode, file_path)
+    case mode
+    when 'for_job'
+      write_result_for_job(result, file_path)
+    when 'for_shard'
+      write_result_for_shard(result, file_path)
+    else
+      puts "Incorrect mode: #{mode}. Look read.me file."
+    end
+  end
+
+  def write_result_for_job(result, file_path)
     file = File.open(file_path.gsub('.csv', '_result.txt'), "w")
     result.each do |cr|
       file.write("#{cr.retailer}\n")
@@ -148,6 +173,18 @@ module Utils
           file.write(",") if index < cr.cats[lvl].count - 1
           file.write("\n")
         }
+      end
+      file.write("\n")
+    end
+  end
+
+  def write_result_for_shard(result, file_path)
+    file = File.open(file_path.gsub('.csv', '_result.txt'), "w")
+    result.each do |cr|
+      file.write("#{cr.retailer}\n")
+      cr.levels.each do |lvl|
+        parse_breadcrumb_for_cmd(cr.cats[lvl], 'file', file)
+        file.write("#{LEVEL_PARAM} #{lvl}")
       end
       file.write("\n")
     end
