@@ -12,7 +12,8 @@ class TMP
 		categories = []
 		configs.each { |conf| sections += conf.sections }
 		if sections.any?
-			sections.each { |section| categories.merge(section.categories) }
+			# sections.each { |section| categories + section.categories }
+			puts sections.inspect
 		else
 			puts "Sections are empty: #{sections}"
 		end
@@ -69,9 +70,9 @@ end
 # puts tmp.get_all_categories(configs).inspect
 ##########################################################
 
-FILE_PATH = "T:\\Ruby\\tools\\test_files\\file.csv"
+# FILE_PATH = "T:\\Ruby\\tools\\test_files\\file.csv"
 
-tmp = TMP.new
-arr = tmp.parse_input_file(FILE_PATH, "\t")
+# tmp = TMP.new
+# arr = tmp.parse_input_file(FILE_PATH, "\t")
 
-puts tmp.sort_by_retailers(arr)
+# sorted_by_retailer = tmp.sort_by_retailers(arr)

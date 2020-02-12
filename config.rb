@@ -1,3 +1,4 @@
+require_relative 'category'
 require_relative 'section'
 
 class Config
@@ -32,7 +33,21 @@ class Config
 	def parse_section(hash)
 		section = Section.new
 		section.name = hash["name"]
-		section.categories = hash["categories"]
+		if hash["categories"]
+			section.categories = parse_categories(hash)
+		else
+			puts "Categories are empty: #{hash["categories"]}"
+		end
 		section
+	end
+
+	def parse_categories(hash)
+		parsed_categories = []
+		hash["categories"].each do |category, url|
+			parsed_categories << Category.new(
+				category,
+				url
+			)
+		end
 	end
 end
