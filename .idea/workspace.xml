@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Added write option for job">
+      <change afterPath="$PROJECT_DIR$/archive/runner.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/entities/category_result.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/entities/main_result.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/entities/result.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/config.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dup_finder_tool/dup_finder.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/dup_finder.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dup_finder_tool/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/file_manager.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dup_finder_tool/helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/result_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/result_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_csv_tool/prepare_csv.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_csv_tool/prepare_csv.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_csv_tool/prepare_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_csv_tool/prepare_utils.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/section.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/tmp.rb" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby Class" />
+        <option value="Ruby Module" />
       </list>
     </option>
   </component>
@@ -22,30 +40,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UZrITQnE1gREwwTPAmixA8GahV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/tmp/tool_cr.rb" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\RubyPractice\tools\modules" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/archive" />
+      <recent name="$PROJECT_DIR$/dev" />
+      <recent name="$PROJECT_DIR$/dev/entities" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Ruby.Run PrepareCR ">
+  <component name="RunManager" selected="Ruby.ToolCR_runner">
     <configuration name="Run PrepareCR " type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="Utils" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -55,9 +72,49 @@
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/prepare_cr_tool/prepare_cr.rb" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/archive/prepare_cr_tool/prepare_cr.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --mode for_shard --options file print" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ToolCR_runner" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tool_cr.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode job --br_sep ***" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev_runner" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/archive/runner.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="run tmp" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -69,13 +126,19 @@
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/modules/tmp.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--name=Ihar -h" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Ruby.Run PrepareCR " />
+      <item itemvalue="Ruby.dev_runner" />
+      <item itemvalue="Ruby.ToolCR_runner" />
       <item itemvalue="Ruby.run tmp" />
     </list>
   </component>
@@ -107,6 +170,13 @@
       <workItem from="1577124788000" duration="301000" />
       <workItem from="1580147435421" duration="1767000" />
       <workItem from="1580149236359" duration="704000" />
+      <workItem from="1582305739746" duration="109000" />
+      <workItem from="1582305859789" duration="2687000" />
+      <workItem from="1582316910572" duration="5464000" />
+      <workItem from="1582350541277" duration="3300000" />
+      <workItem from="1582381130678" duration="12131000" />
+      <workItem from="1582445254616" duration="285000" />
+      <workItem from="1582452223325" duration="7302000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -234,8 +304,40 @@
     <MESSAGE value="Added write option for job" />
     <option name="LAST_COMMIT_MESSAGE" value="Added write option for job" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582384819078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582384819078" />
+    <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl" timestamp="1582383773234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582383773234" />
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom" timestamp="1582458632446">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582458632446" />
+    <state width="1878" height="160" key="GridCell.Tab.0.center" timestamp="1582458632446">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="160" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582458632446" />
+    <state width="1878" height="160" key="GridCell.Tab.0.left" timestamp="1582458632445">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="160" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582458632445" />
+    <state width="1878" height="160" key="GridCell.Tab.0.right" timestamp="1582458632446">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="160" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582458632446" />
+    <state x="464" y="154" key="SettingsEditor" timestamp="1582459526322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582459526322" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582456753009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
     <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1576264314884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1580149612159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1582458632438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>

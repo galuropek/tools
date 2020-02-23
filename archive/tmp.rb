@@ -1,6 +1,6 @@
 require_relative 'config'
 require_relative 'category'
-require_relative 'modules/file_manager'
+require_relative 'modules/es/file_manager'
 require 'json'
 
 class TMP

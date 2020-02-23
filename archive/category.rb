@@ -1,5 +1,5 @@
 class Category
-	attr_accessor :category_name, :url, :retailer
+	attr_accessor :category_name, :url, :retailer, :level
 
 	def initialize(category, url, retailer = nil)
 		@category_name = category

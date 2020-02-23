@@ -1,8 +1,8 @@
 require 'csv'
 module Utils
 
-  def get_table_csv(path, col_sep: "\t")
-    CSV.parse(File.read(path), :headers => true, :col_sep => col_sep)
+  def get_table_csv(path, col_sep = nil)
+    CSV.parse(File.read(path), :headers => true, :col_sep => col_sep ? col_sep : "\t")
   end
 
   def create_result_file(table, file_path, attr_name = nil)
