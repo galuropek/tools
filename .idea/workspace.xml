@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/utils/utils_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/utils/utils_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/tool_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/tool_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/tmp/tool_cr.rb" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -43,6 +46,18 @@
       <recent name="$PROJECT_DIR$/dev" />
       <recent name="$PROJECT_DIR$/dev/entities" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Ruby.ToolCR_runner">
     <configuration name="Run PrepareCR " type="RubyRunConfigurationType" factoryName="Ruby">
@@ -78,7 +93,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tool_cr.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode cmd --br_sep ***" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --mode job --br_sep &gt; --options go" />
       <method v="2" />
     </configuration>
     <configuration name="dev_runner" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -159,6 +174,8 @@
       <workItem from="1582381130678" duration="12131000" />
       <workItem from="1582445254616" duration="285000" />
       <workItem from="1582452223325" duration="11333000" />
+      <workItem from="1582468119361" duration="1622000" />
+      <workItem from="1582469763454" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -357,9 +374,9 @@
     <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582459837364" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582456753009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
     <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1576264314884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1582463673071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582456753009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1582470753454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>

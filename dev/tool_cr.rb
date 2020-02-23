@@ -36,6 +36,7 @@ class ToolCR
 
   def run
     table = get_table_from_csv(@file_path)
+    validate_table(table, @col_sep, %w(cat url))
     @result = Result.create(:main)
     parse_table_for_result(table)
     do_action(@options.first)
@@ -56,12 +57,13 @@ class ToolCR
   def do_action(action)
     case action
     when 'print'
-      # print_result(result, @mode)
+      puts "Option: #{action} - not work yet >:.( Has been used option 'file' by default."
+      do_action('file')
       # todo
     when 'file'
-      # write_result(result, @mode, @file_path)
-      # todo
+      write_result(@result, @mode, @file_path)
     else
+      puts "Incorrect option '#{action}', check read.me file. Has been used option 'file' by default."
       write_result(@result, @mode, @file_path)
     end
   end
