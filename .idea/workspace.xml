@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Added write option for job">
-      <change afterPath="$PROJECT_DIR$/archive/runner.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/entities/category_result.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/entities/main_result.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/entities/result.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/config.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dup_finder_tool/dup_finder.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/dup_finder.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dup_finder_tool/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/file_manager.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dup_finder_tool/helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/dup_finder_tool/helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_cr_tool/result_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/result_cr.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_csv_tool/prepare_csv.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_csv_tool/prepare_csv.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_csv_tool/prepare_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_csv_tool/prepare_utils.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/section.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/tmp.rb" afterDir="false" />
-    </list>
+    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +155,7 @@
       <workItem from="1582350541277" duration="3300000" />
       <workItem from="1582381130678" duration="12131000" />
       <workItem from="1582445254616" duration="285000" />
-      <workItem from="1582452223325" duration="7302000" />
+      <workItem from="1582452223325" duration="7593000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -269,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576269383034</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Structure refactoring">
+      <created>1582459731991</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582459731991</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Created utils">
+      <created>1582459816948</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582459816948</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,17 +295,19 @@
     <MESSAGE value="Common module for tools" />
     <MESSAGE value="Changes for file_manager module" />
     <MESSAGE value="Added write option for job" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added write option for job" />
+    <MESSAGE value="Structure refactoring" />
+    <MESSAGE value="Created utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created utils" />
   </component>
   <component name="WindowStateProjectService">
     <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582384819078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582384819078" />
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2" timestamp="1582459731912">
+    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2" timestamp="1582459816891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582459731912" />
+    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582459816891" />
     <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl" timestamp="1582383773234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
