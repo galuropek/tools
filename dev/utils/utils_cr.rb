@@ -38,12 +38,15 @@ module UtilsCR
 
   # @param [Hash] group
   def do_job_format(group)
-    @current_level = nil
     group.each do |retailer, cats|
       add_retailer(retailer)
       group_by(cats, 'level').each do |level, cats_array|
+        need_to_add_level = true
         cats_array.each_with_index do |category, index|
-          add_level(level)
+          if need_to_add_level
+            add_level(level)
+            need_to_add_level = false
+          end
           line = "\"#{category.breadcrumb.strip}\": \"#{category.url.strip}\""
           line += COMMA_SEP if index < cats_array.count - 1
           add_line(line)
@@ -60,13 +63,18 @@ module UtilsCR
     group.each do |retailer, cats|
       add_retailer(retailer)
       group_by(cats, 'level').each do |level, cats_array|
+        need_to_add_level = true
         cats_array.each_with_index do |category, index|
-          add_level(level)
+          if need_to_add_level
+            add_level(level)
+            need_to_add_level = false
+          end
           seed_url += " \"#{category.url.strip}\""
           seed_path += " \"#{category.breadcrumb.strip}\""
         end
         add_cmd(seed_url, seed_path, level)
       end
+      add_line(LINE_BREAK)
     end
     @str_result
   end
@@ -95,13 +103,7 @@ module UtilsCR
   end
 
   def add_level(category_level)
-    if @current_level.nil?
-      add_line("///level: #{category_level}")
-      @current_level = category_level
-    elsif @current_level != category_level
-      add_line("///level: #{category_level}")
-      @current_level = category_level
-    end
+    add_line("///level: #{category_level}")
   end
 
   def add_retailer(retailer)
