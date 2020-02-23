@@ -8,7 +8,8 @@ module UtilsCR
   LEVEL_PARAM = '--level'
   LINE_BREAK = "\n"
   COMMA_SEP = ','
-  RETAILER = "###RETAILER"
+  RETAILER = '###RETAILER'
+  LEVEL = '///level'
 
   # @param [MainResult] result
   # @param [String] mode
@@ -103,11 +104,11 @@ module UtilsCR
   end
 
   def add_level(category_level)
-    add_line("///level: #{category_level}")
+    add_line("#{LEVEL}: #{category_level}")
   end
 
   def add_retailer(retailer)
-    add_line(RETAILER + ': ' + retailer)
+    add_line("#{RETAILER}: #{retailer}")
   end
 
 
