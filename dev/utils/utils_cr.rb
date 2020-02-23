@@ -8,6 +8,7 @@ module UtilsCR
   LEVEL_PARAM = '--level'
   LINE_BREAK = "\n"
   COMMA_SEP = ','
+  RETAILER = "###RETAILER"
 
   # @param [MainResult] result
   # @param [String] mode
@@ -15,28 +16,31 @@ module UtilsCR
   def write_result(result, mode, file_path)
     case mode
     when 'job'
-      str_result = job_format(result, file_path)
-      write_to_file(file_path, str_result)
+      str_result = job_format(result)
     when 'cmd'
-      # todo
+      str_result = cmd_format(result)
     else
-      puts "Incorrect mode: #{mode.inspect}. Check read.me file."
+      str_result = "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
     end
+    write_to_file(file_path, str_result)
   end
 
   # @param [MainResult] result
-  # @param [String] file_path
-  def job_format(result, file_path)
-    result.sort_by_level
-    result.sort_by_retailer
+  def job_format(result)
+    sort(result)
     do_job_format(group_by(result.get_all, 'retailer'))
+  end
+
+  def cmd_format(result)
+    sort(result)
+    do_cmd_format(group_by(result.get_all, 'retailer'))
   end
 
   # @param [Hash] group
   def do_job_format(group)
     @current_level = nil
     group.each do |retailer, cats|
-      add_line("###RETAILER: #{retailer}")
+      add_retailer(retailer)
       group_by(cats, 'level').each do |level, cats_array|
         cats_array.each_with_index do |category, index|
           add_level(level)
@@ -50,7 +54,24 @@ module UtilsCR
     @str_result
   end
 
-##### HALPERS #####
+  def do_cmd_format(group)
+    seed_url = SEED_URL_PARAM
+    seed_path = SEED_PATH_PARAM
+    group.each do |retailer, cats|
+      add_retailer(retailer)
+      group_by(cats, 'level').each do |level, cats_array|
+        cats_array.each_with_index do |category, index|
+          add_level(level)
+          seed_url += " \"#{category.url.strip}\""
+          seed_path += " \"#{category.breadcrumb.strip}\""
+        end
+        add_cmd(seed_url, seed_path, level)
+      end
+    end
+    @str_result
+  end
+
+  ##### HALPERS #####
 
   # @param [Array] categories
   # @return [Hash] {:key1 => [categories], :key2 => [categories]}
@@ -66,8 +87,11 @@ module UtilsCR
   end
 
   def add_line(line)
-    @str_result = "#{line}\n" unless @str_result
-    @str_result += "#{line}\n"
+    if @str_result.nil?
+      @str_result = "#{line}\n"
+    else
+      @str_result += "#{line}\n"
+    end
   end
 
   def add_level(category_level)
@@ -78,5 +102,19 @@ module UtilsCR
       add_line("///level: #{category_level}")
       @current_level = category_level
     end
+  end
+
+  def add_retailer(retailer)
+    add_line(RETAILER + ': ' + retailer)
+  end
+
+
+  def add_cmd(seed_url, seed_path, level)
+    add_line("#{seed_url} #{seed_path} #{LEVEL_PARAM} #{level}")
+  end
+
+  def sort(result)
+    result.sort_by_level
+    result.sort_by_retailer
   end
 end
