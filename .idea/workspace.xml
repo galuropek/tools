@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/utils/utils_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/utils/utils_cr.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/tmp/tool_cr.rb" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -158,7 +157,8 @@
       <workItem from="1582350541277" duration="3300000" />
       <workItem from="1582381130678" duration="12131000" />
       <workItem from="1582445254616" duration="285000" />
-      <workItem from="1582452223325" duration="11333000" />
+      <workItem from="1582452223325" duration="11922000" />
+      <workItem from="1582570228914" duration="297000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -279,7 +279,35 @@
       <option name="project" value="LOCAL" />
       <updated>1582463019875</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated mode 'cmd'">
+      <created>1582463798659</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1582463798659</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated mode 'cmd'">
+      <created>1582464130799</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1582464130799</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated mode 'cmd'">
+      <created>1582570260776</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1582570260776</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated mode 'cmd'">
+      <created>1582570472642</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1582570472642</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,45 +344,62 @@
     <MESSAGE value="Created utils" />
     <MESSAGE value="Created tool" />
     <MESSAGE value="Added mode 'cmd'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mode 'cmd'" />
+    <MESSAGE value="Updated mode 'cmd'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated mode 'cmd'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582463557907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582463557907" />
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2" timestamp="1582463019830">
+    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2" timestamp="1582570472595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582463019830" />
+    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582570472595" />
+    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog" timestamp="1582570496466">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570496466" />
     <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl" timestamp="1582383773234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582383773234" />
-    <state width="1878" height="160" key="GridCell.Tab.0.bottom" timestamp="1582463673078">
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom" timestamp="1582464146873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582463673078" />
-    <state width="1878" height="160" key="GridCell.Tab.0.center" timestamp="1582463673078">
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
+    <state width="1878" height="160" key="GridCell.Tab.0.center" timestamp="1582464146873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582463673078" />
-    <state width="1878" height="160" key="GridCell.Tab.0.left" timestamp="1582463673078">
+    <state width="1878" height="160" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
+    <state width="1878" height="160" key="GridCell.Tab.0.left" timestamp="1582464146873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582463673078" />
-    <state width="1878" height="160" key="GridCell.Tab.0.right" timestamp="1582463673078">
+    <state width="1878" height="160" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
+    <state width="1878" height="160" key="GridCell.Tab.0.right" timestamp="1582464146873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582463673078" />
-    <state x="464" y="154" key="SettingsEditor" timestamp="1582459526322">
+    <state width="1878" height="160" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
+    <state x="182" y="86" width="1536" height="857" key="MergeDialog" timestamp="1582570512313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582459526322" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1582459837364">
+    <state x="182" y="86" width="1536" height="857" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570512313" />
+    <state x="671" y="238" width="567" height="557" key="MultipleFileMergeDialog" timestamp="1582570517901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582459837364" />
+    <state x="671" y="238" width="567" height="557" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570517901" />
+    <state x="464" y="154" key="SettingsEditor" timestamp="1582570525512">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582570525512" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1582570497810">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582570497810" />
+    <state x="682" y="313" width="555" height="406" key="git4idea.merge.GitPullDialog" timestamp="1582570448643">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="313" width="555" height="406" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570448643" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
