@@ -15,15 +15,23 @@ module UtilsCR
   # @param [String] mode
   # @param [String] file_path
   def write_result(result, mode, file_path)
+    str_result = get_str_result(result, mode)
+    write_to_file(file_path, str_result)
+  end
+
+  def print_result(result, mode)
+    puts get_str_result(result, mode)
+  end
+
+  def get_str_result(result, mode)
     case mode
     when 'job'
-      str_result = job_format(result)
+      job_format(result)
     when 'cmd'
-      str_result = cmd_format(result)
+      cmd_format(result)
     else
-      str_result = "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
+      "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
     end
-    write_to_file(file_path, str_result)
   end
 
   # @param [MainResult] result
