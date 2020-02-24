@@ -57,9 +57,7 @@ class ToolCR
   def do_action(action)
     case action
     when 'print'
-      puts "Option: #{action} - not work yet >:.( Has been used option 'file' by default."
-      do_action('file')
-      # todo
+      print_result(@result, @mode)
     when 'file'
       write_result(@result, @mode, @file_path)
     else
