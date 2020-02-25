@@ -1,4 +1,8 @@
 require_relative '../../modules/file_manager'
+require_relative '../entities/result'
+require_relative '../entities/main_result'
+require_relative '../entities/category_result'
+require 'json'
 
 module UtilsCR
   include FileManager
@@ -10,6 +14,38 @@ module UtilsCR
   COMMA_SEP = ','
   RETAILER = '###RETAILER'
   LEVEL = '///level'
+
+  ##### COMPARING CR WITH RR-JOB
+
+  # @param [String] file_path - file to path
+  def parse_rr_job(file_path)
+    result = Result.create(:main)
+    file = open_file(file_path)
+    config = JSON.parse(file.read)
+    unless config['Crawling']
+      puts "'Crawling' section not found into rr-job."
+      return
+    end
+    config['Crawling'].each do |section|
+      parse_section(section, result)
+    end
+    result
+  end
+
+  def parse_section(section, result)
+    unless section['categories']
+      puts "'categories' not found into section #{section['name']}."
+      return
+    end
+    section['categories'].each do |category, url|
+      category_result = Result.create(:category)
+      category_result.breadcrumb = category
+      category_result.url = url
+      result.add_to_result(category_result)
+    end
+  end
+
+  ##### PREPARE CR FOR JOB/CMD
 
   # @param [MainResult] result
   # @param [String] mode
