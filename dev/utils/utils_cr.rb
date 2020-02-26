@@ -15,9 +15,38 @@ module UtilsCR
   RETAILER = '###RETAILER'
   LEVEL = '///level'
 
+  # @param [MainResult] result
+  # @param [String] mode
+  # @param [String] file_path
+  def write_result(result, mode, file_path)
+    str_result = get_str_result(result, mode)
+    write_to_file(file_path, str_result)
+  end
+
+  # @param [MainResult] result
+  # @param [String] mode
+  def print_result(result, mode)
+    puts get_str_result(result, mode)
+  end
+
+  def get_str_result(result, mode)
+    case mode
+    when 'job'
+      job_format(result)
+    when 'cmd'
+      cmd_format(result)
+    when 'compare'
+      config_result = parse_rr_job(result)
+      compare_format(config_result, result)
+    else
+      "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
+    end
+  end
+
   ##### COMPARING CR WITH RR-JOB
 
   # @param [String] file_path - file to path
+  # @return [MainResult]
   def parse_rr_job(file_path)
     result = Result.create(:main)
     file = open_file(file_path)
@@ -45,30 +74,11 @@ module UtilsCR
     end
   end
 
+  def compare_format(config_result, cr_result)
+    #todo
+  end
+
   ##### PREPARE CR FOR JOB/CMD
-
-  # @param [MainResult] result
-  # @param [String] mode
-  # @param [String] file_path
-  def write_result(result, mode, file_path)
-    str_result = get_str_result(result, mode)
-    write_to_file(file_path, str_result)
-  end
-
-  def print_result(result, mode)
-    puts get_str_result(result, mode)
-  end
-
-  def get_str_result(result, mode)
-    case mode
-    when 'job'
-      job_format(result)
-    when 'cmd'
-      cmd_format(result)
-    else
-      "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
-    end
-  end
 
   # @param [MainResult] result
   def job_format(result)
