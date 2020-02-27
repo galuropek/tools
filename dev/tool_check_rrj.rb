@@ -18,13 +18,14 @@ class ToolCheckRRJ
     argv_params = get_params(argv, PARAMS_SETTINGS)
     @cr_path = argv_params['cr_path'].first if argv_params['cr_path']
     @conf_path = argv_params['conf_path'].first if argv_params['conf_path']
-    @br_sep = argv_params['br_sep'] ? argv_params['br_sep'].first : '***'
+    @br_sep = argv_params['br_sep'].first if argv_params['br_sep']
   end
 
   def run
     cr_table = get_table_from_csv(@cr_path)
     validate_table(cr_table, @col_sep, %w(cat url))
     @cr_result = parse_table_for_result(cr_table, @br_sep)
+    @conf_result = parse_rr_job(@conf_path)
     do_action
   end
 
