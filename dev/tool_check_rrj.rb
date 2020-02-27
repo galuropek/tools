@@ -22,6 +22,13 @@ class ToolCheckRRJ
   end
 
   def run
+    cr_table = get_table_from_csv(@cr_path)
+    validate_table(cr_table, @col_sep, %w(cat url))
+    @cr_result = parse_table_for_result(cr_table, @br_sep)
+    do_action
+  end
+
+  def do_action
     #todo
   end
 end
