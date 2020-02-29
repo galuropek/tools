@@ -30,13 +30,14 @@ module UtilsCR
   end
 
   def get_str_result(result, mode)
+    config_path = '/home/hlaushka/Documents/docs/config.txt'
     case mode
     when 'job'
       job_format(result)
     when 'cmd'
       cmd_format(result)
     when 'compare'
-      config_result = parse_rr_job(result)
+      config_result = parse_rr_job(config_path)
       compare_format(config_result, result)
     else
       "PAY ATTENTION!!! Incorrect mode: #{mode.inspect}. Check your command '--mode' and read.me file."
@@ -75,10 +76,28 @@ module UtilsCR
   end
 
   def compare_format(config_result, cr_result)
+    config_result
+    puts "Not working yet :("
     #todo
   end
 
   ##### PREPARE CR FOR JOB/CMD
+
+  # @param [Table] table
+  # @return [MainResult]
+  def parse_table_for_result(table, br_sep)
+    result = Result.create(:main)
+    table.each do |element|
+      category = Result.create(:category)
+      category.breadcrumb = element['cat']
+      category.url = element['url']
+      category.retailer = element['retailer']
+      category.br_sep = br_sep
+      category.calc_level
+      result.add_to_result(category)
+    end
+    result
+  end
 
   # @param [MainResult] result
   def job_format(result)
