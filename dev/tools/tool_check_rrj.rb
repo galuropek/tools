@@ -1,4 +1,4 @@
-require_relative '../modules/params'
+require_relative '../modules/es/params'
 require_relative '../modules/file_manager'
 require_relative '../dev/utils/utils_cr'
 

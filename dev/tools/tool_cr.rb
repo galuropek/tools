@@ -1,12 +1,13 @@
-require_relative '../modules/params'
-require_relative '../modules/file_manager'
-require_relative 'entities/result'
-require_relative 'entities/main_result'
-require_relative 'entities/category_result'
-require_relative 'utils/utils_cr'
+require_relative '../../modules/params'
+require_relative '../../modules/file_manager'
+require_relative '../entities/result'
+require_relative '../entities/main_result'
+require_relative '../entities/category_result'
+require_relative '../utils/utils_cr'
 
-class ToolCR
-  include ParamsParser
+require 'pry'
+
+class ToolCr
   include FileManager
   include UtilsCR
 
@@ -66,5 +67,3 @@ class ToolCR
     end
   end
 end
-
-t = ToolCR.new(ARGV).run
