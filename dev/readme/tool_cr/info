@@ -1,0 +1,7 @@
+############ Tool CR #################################################
+This tool transform CR from requirements to rr-job style or cmd style.
+You should prepare the scv file with "cat", "url" and "retailer"
+columns and select some options in tool menu. You can print result to
+console or save to the file. Good choice when there are 300+ CR in
+requirements.
+############ end #####################################################
