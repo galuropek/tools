@@ -1,5 +1,5 @@
 require_relative 'result_cr'
-require_relative '../modules/file_manager'
+require_relative '../../modules/file_manager'
 require 'csv'
 
 module Utils

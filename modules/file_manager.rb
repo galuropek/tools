@@ -1,7 +1,9 @@
 require 'csv'
+require 'json'
 
 module FileManager
 
+  TEST_PATHS = 'files/test_paths.txt'
   # @param [String] path - path to file
   # @param [String] col_sep in csv file
   def get_table_from_csv(path, col_sep = nil)
@@ -34,7 +36,21 @@ module FileManager
   end
 
   # @param [File] file
-  def close_file(file)
+  # def close_file(file)
+  #   file.close
+  # end
+
+  def read_file(path)
+    file = open_file(path)
+    file_text = file.read
     file.close
+
+    file_text
+  end
+
+  def test_path_to_test_file(file_name)
+    file_text = read_file(TEST_PATHS)
+    file_hash = JSON(file_text, symbolize_names: true)
+    file_hash.dig(file_name.to_sym, :path)
   end
 end

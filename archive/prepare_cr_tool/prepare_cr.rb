@@ -1,6 +1,6 @@
 # $LOAD_PATH << __dir__
 require_relative 'prepare_cr_utils'
-require_relative '../modules/params'
+require_relative '../../modules/params'
 
 class PrepareCR
   include Utils

@@ -1,78 +1,12 @@
-require_relative 'config'
-require_relative 'category'
-require_relative 'modules/es/file_manager'
-require 'json'
+require 'nokogiri'
 
-class TMP
+NAME = ".//li/span//span"
+URL = ".//li/span/a/@href"
 
-	include FileManager
+element = '<div aria-live="polite" class="a-row a-expander-container a-expander-extend-container"><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_3?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1045024&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Dresses</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_4?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A2368343011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Tops, Tees &amp; Blouses</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_5?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1044456&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Sweaters</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_6?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1258603011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Fashion Hoodies &amp; Sweatshirts</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_7?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1048188&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Jeans</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_8?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1048184&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Pants</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_9?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1045022&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Skirts</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_10?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1048186&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Shorts</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_11?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1258967011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Leggings</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_12?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A3456051&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Active</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_13?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1046622&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Swimsuits &amp; Cover Ups</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_14?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A9522931011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Lingerie, Sleep &amp; Lounge</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_15?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A9522930011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Jumpsuits, Rompers &amp; Overalls</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_16?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1044646&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Coats, Jackets &amp; Vests</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_17?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A9522932011&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Suiting &amp; Blazers</span></a></span></li><li><span class="a-list-item"></span></li><li><span class="a-list-item"><a class="a-link-normal s-ref-text-link" href="/s/ref=lp_1040660_ex_n_18?rh=n%3A7141123011%2Cn%3A7147440011%2Cn%3A1040660%2Cn%3A1044886&amp;bbn=1040660&amp;ie=UTF8"><span class="a-size-small a-color-base">Socks &amp; Hosiery</span></a></span></li></div>'
 
-	def get_all_categories(configs)
-		sections = []
-		categories = []
-		configs.each { |conf| sections += conf.sections }
-		if sections.any?
-			# sections.each { |section| categories + section.categories }
-			puts sections.inspect
-		else
-			puts "Sections are empty: #{sections}"
-		end
-		categories
-	end
+doc = Nokogiri::HTML(element)
 
-	def parse_input_file(path, col_sep)
-	    table = get_table_from_csv(path, col_sep)
-	    parse_table(table)
-	end
+res = {}
 
-	def parse_table(table)
-		categories_array = []
-		table.each do |element|
-			categories_array << Category.new(
-				element['cat'],
-				element['url'],
-				element['retailer']
-			)
-		end
-		categories_array
-	end
-
-	# Return hash: {retailer => [category1, category2...]}
-	def sort_by_retailers(categories)
-		hash_by_retailers = {}
-		categories.each do |category|
-			retailer = category.retailer
-			hash_by_retailers[retailer] = [] if hash_by_retailers[retailer].nil?
-			hash_by_retailers[retailer] << category
-		end
-		hash_by_retailers
-	end
-end
-
-# FILE_PATH = "T:\\Ruby\\tools\\test_files\\test.txt"
-
-# file = File.open(FILE_PATH, "r")
-
-# json = JSON.parse(file.read)
-
-# file.close
-
-# configs = []
-
-# json.each do |name, sections|
-# 	config = Config.new
-# 	config.name = name
-# 	config.set_sections(sections)
-# 	configs << config
-# end
-
-# tmp = TMP.new
-# puts tmp.get_all_categories(configs).inspect
-##########################################################
-
-# FILE_PATH = "T:\\Ruby\\tools\\test_files\\file.csv"
-
-# tmp = TMP.new
-# arr = tmp.parse_input_file(FILE_PATH, "\t")
-
-# sorted_by_retailer = tmp.sort_by_retailers(arr)
+puts doc.count

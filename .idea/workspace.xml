@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="">
+    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Create PARA check_rrj">
+      <change afterPath="$PROJECT_DIR$/modules/tool_runner.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_or_debug.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/tmp.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/tmp.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/entities/result.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/entities/result.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/params.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/params.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Ruby Class" />
         <option value="Ruby Module" />
+        <option value="Ruby File" />
+        <option value="Ruby Class" />
       </list>
     </option>
   </component>
@@ -23,27 +35,87 @@
   <component name="ProjectId" id="1UZrITQnE1gREwwTPAmixA8GahV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/tmp/tool_cr.rb" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/launcher.rb" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\RubyPractice\tools\modules" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev/tools" />
       <recent name="$PROJECT_DIR$/archive" />
       <recent name="$PROJECT_DIR$/dev" />
       <recent name="$PROJECT_DIR$/dev/entities" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\RubyPractice\tools\modules" />
+    </key>
   </component>
-  <component name="RunManager" selected="Ruby.ToolCR_runner">
+  <component name="RunManager" selected="Ruby.Launcher">
+    <configuration name="Unnamed" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/tools/trash/doc.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Launcher" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/launcher.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RankingFileParser" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tools/tool_ranking_file_parse.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../test/bigw-2020-07-27-3028-ranking.txt --mode file_with_cats --options print_cats_stat" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Reg" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/trash/reg.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Run PrepareCR " type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="Utils" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -62,6 +134,24 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path C:\Users\user\Documents\test\CR.csv --br_sep &gt; --col_sep , --mode for_shard --options file print" />
       <method v="2" />
     </configuration>
+    <configuration name="TestOrDebug" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/test_or_debug.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ToolCR_runner" type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="Utils" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -76,8 +166,45 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tool_cr.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode cmd --br_sep ***" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tools/tool_cr.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode compare --br_sep *** --options print" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="RubyRunConfigurationType" factoryName="Ruby" nameIsGenerated="true">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tmp.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="Utils" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tmp.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="dev_runner" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -112,15 +239,21 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/modules/tmp.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--name=Ihar -h" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tmp.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.Unnamed" />
+      <item itemvalue="Ruby.Launcher" />
       <item itemvalue="Ruby.Run PrepareCR " />
       <item itemvalue="Ruby.dev_runner" />
       <item itemvalue="Ruby.ToolCR_runner" />
       <item itemvalue="Ruby.run tmp" />
+      <item itemvalue="Ruby.TestOrDebug" />
+      <item itemvalue="Ruby.Unnamed" />
+      <item itemvalue="Ruby.RankingFileParser" />
+      <item itemvalue="Ruby.Reg" />
     </list>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -158,7 +291,97 @@
       <workItem from="1582381130678" duration="12131000" />
       <workItem from="1582445254616" duration="285000" />
       <workItem from="1582452223325" duration="11922000" />
-      <workItem from="1582570228914" duration="297000" />
+      <workItem from="1582570228914" duration="1300000" />
+      <workItem from="1582651796425" duration="5183000" />
+      <workItem from="1582741630093" duration="986000" />
+      <workItem from="1582742625115" duration="4039000" />
+      <workItem from="1582829015462" duration="3640000" />
+      <workItem from="1582997137675" duration="215000" />
+      <workItem from="1583862949075" duration="306000" />
+      <workItem from="1584008578005" duration="1463000" />
+      <workItem from="1584090599588" duration="602000" />
+      <workItem from="1584439523549" duration="2151000" />
+      <workItem from="1584545176158" duration="1092000" />
+      <workItem from="1585044133812" duration="135000" />
+      <workItem from="1585061922179" duration="1810000" />
+      <workItem from="1585063739518" duration="201000" />
+      <workItem from="1585116918914" duration="1421000" />
+      <workItem from="1585118729997" duration="780000" />
+      <workItem from="1585131679672" duration="663000" />
+      <workItem from="1585140378759" duration="991000" />
+      <workItem from="1585209595443" duration="766000" />
+      <workItem from="1585213895697" duration="994000" />
+      <workItem from="1585226061361" duration="477000" />
+      <workItem from="1585229484412" duration="1801000" />
+      <workItem from="1585234261221" duration="1109000" />
+      <workItem from="1585294755974" duration="1798000" />
+      <workItem from="1585302138317" duration="845000" />
+      <workItem from="1585552605740" duration="735000" />
+      <workItem from="1585568689838" duration="1356000" />
+      <workItem from="1585636307129" duration="2113000" />
+      <workItem from="1585638684434" duration="1222000" />
+      <workItem from="1585687712420" duration="281000" />
+      <workItem from="1585726816948" duration="1004000" />
+      <workItem from="1585729613662" duration="1817000" />
+      <workItem from="1585731920474" duration="756000" />
+      <workItem from="1585733761307" duration="2027000" />
+      <workItem from="1585896652953" duration="820000" />
+      <workItem from="1585897960998" duration="979000" />
+      <workItem from="1585910587370" duration="1850000" />
+      <workItem from="1585985732252" duration="647000" />
+      <workItem from="1586856347578" duration="829000" />
+      <workItem from="1586870378709" duration="792000" />
+      <workItem from="1586879243403" duration="853000" />
+      <workItem from="1586970128078" duration="331000" />
+      <workItem from="1587397711303" duration="166000" />
+      <workItem from="1587829006154" duration="1417000" />
+      <workItem from="1587831600402" duration="1836000" />
+      <workItem from="1587833442930" duration="765000" />
+      <workItem from="1587835338929" duration="2010000" />
+      <workItem from="1587837357175" duration="984000" />
+      <workItem from="1587839275307" duration="1799000" />
+      <workItem from="1587841085682" duration="1799000" />
+      <workItem from="1587842893780" duration="2042000" />
+      <workItem from="1587845370037" duration="803000" />
+      <workItem from="1587885895343" duration="1409000" />
+      <workItem from="1587887701877" duration="1799000" />
+      <workItem from="1587889507807" duration="1799000" />
+      <workItem from="1587891314089" duration="923000" />
+      <workItem from="1588795633558" duration="1000" />
+      <workItem from="1589108535942" duration="1000" />
+      <workItem from="1589108607365" duration="24000" />
+      <workItem from="1589108640925" duration="4000" />
+      <workItem from="1589108654167" duration="100000" />
+      <workItem from="1589108762342" duration="11000" />
+      <workItem from="1589111328159" duration="4000" />
+      <workItem from="1596284075769" duration="1792000" />
+      <workItem from="1596285875727" duration="1303000" />
+      <workItem from="1596287681452" duration="1800000" />
+      <workItem from="1596289488169" duration="1799000" />
+      <workItem from="1596291294981" duration="1559000" />
+      <workItem from="1596369853289" duration="1800000" />
+      <workItem from="1596371684888" duration="1798000" />
+      <workItem from="1596373492414" duration="625000" />
+      <workItem from="1596473623356" duration="1720000" />
+      <workItem from="1596475431774" duration="1579000" />
+      <workItem from="1596540738048" duration="1344000" />
+      <workItem from="1596546192083" duration="653000" />
+      <workItem from="1596548016949" duration="654000" />
+      <workItem from="1597044761231" duration="379000" />
+      <workItem from="1601548733825" duration="13000" />
+      <workItem from="1605608281781" duration="2352000" />
+      <workItem from="1605630649907" duration="1798000" />
+      <workItem from="1605632470491" duration="1800000" />
+      <workItem from="1605634277525" duration="1800000" />
+      <workItem from="1605636088897" duration="1806000" />
+      <workItem from="1605637912964" duration="1806000" />
+      <workItem from="1605639731074" duration="152000" />
+      <workItem from="1605695166635" duration="1802000" />
+      <workItem from="1605696977170" duration="815000" />
+      <workItem from="1605707378142" duration="1800000" />
+      <workItem from="1605709194033" duration="1814000" />
+      <workItem from="1605711017117" duration="1818000" />
+      <workItem from="1605712912032" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -307,33 +530,144 @@
       <option name="project" value="LOCAL" />
       <updated>1582570472642</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated mode 'cmd'">
+      <created>1582570536208</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1582570536208</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated mode 'cmd'">
+      <created>1582570550391</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1582570550391</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added print action">
+      <created>1582571251249</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1582571251249</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added print action">
+      <created>1582571272983</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1582571272983</updated>
+    </task>
+    <task id="LOCAL-00026" summary="open_file and read_file methods for management">
+      <created>1582654089590</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1582654089590</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add config parser">
+      <created>1582656490349</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1582656490349</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add git ignore file">
+      <created>1582743046033</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1582743046033</updated>
+    </task>
+    <task id="LOCAL-00029" summary="ignore">
+      <created>1582743215452</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1582743215452</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Prepare utils for compare methods">
+      <created>1582744400960</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1582744400960</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added breadcrumb parser">
+      <created>1582746510699</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1582746510699</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Create params settings for tool check_rrj">
+      <created>1582830172514</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1582830172514</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Parsed required params">
+      <created>1582831860154</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1582831860154</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Get cr_result">
+      <created>1582832095593</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1582832095593</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Parse conf_result">
+      <created>1582832589178</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1582832589178</updated>
+    </task>
+    <task id="LOCAL-00036" summary="transfer method to module">
+      <created>1582997243368</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1582997243368</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Add read.me file">
+      <created>1582997272015</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1582997272015</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Create PARA check_rrj">
+      <created>1605713769001</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1605713769001</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create ParamsParser" />
-    <MESSAGE value="Done checking required params" />
-    <MESSAGE value="Added a message if param is not supported and param_settings description. Fix bug when param is not present in param_settings hash." />
-    <MESSAGE value="Commit" />
-    <MESSAGE value="Added message when params count more then expected." />
-    <MESSAGE value="Cleaning params module" />
-    <MESSAGE value="Params description" />
     <MESSAGE value="Created new class" />
     <MESSAGE value="Added prepare result method" />
     <MESSAGE value="Clean prepare_cr" />
@@ -345,66 +679,92 @@
     <MESSAGE value="Created tool" />
     <MESSAGE value="Added mode 'cmd'" />
     <MESSAGE value="Updated mode 'cmd'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated mode 'cmd'" />
+    <MESSAGE value="Added print action" />
+    <MESSAGE value="open_file and read_file methods for management" />
+    <MESSAGE value="Add config parser" />
+    <MESSAGE value="Add git ignore file" />
+    <MESSAGE value="ignore" />
+    <MESSAGE value="Prepare utils for compare methods" />
+    <MESSAGE value="Added breadcrumb parser" />
+    <MESSAGE value="Create params settings for tool check_rrj" />
+    <MESSAGE value="Parsed required params" />
+    <MESSAGE value="Get cr_result" />
+    <MESSAGE value="Parse conf_result" />
+    <MESSAGE value="transfer method to module" />
+    <MESSAGE value="Add read.me file" />
+    <MESSAGE value="Create PARA check_rrj" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create PARA check_rrj" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582463557907">
+    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605638714382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582463557907" />
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2" timestamp="1582570536157">
+    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605638714382" />
+    <state x="714" y="324" width="481" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605708756606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="371" y="105" width="1167" height="823" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582570536157" />
-    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog" timestamp="1582570496466">
+    <state x="714" y="324" width="481" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605708756606" />
+    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2" timestamp="1605713768899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570496466" />
-    <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl" timestamp="1582383773234">
+    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605713768899" />
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1605631306186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="943" y="356" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582383773234" />
-    <state width="1878" height="160" key="GridCell.Tab.0.bottom" timestamp="1582464146873">
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605631306186" />
+    <state width="1878" height="255" key="GridCell.Tab.0.bottom" timestamp="1605712183892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
-    <state width="1878" height="160" key="GridCell.Tab.0.center" timestamp="1582464146873">
+    <state width="1878" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183892" />
+    <state width="1878" height="255" key="GridCell.Tab.0.center" timestamp="1605712183891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
-    <state width="1878" height="160" key="GridCell.Tab.0.left" timestamp="1582464146873">
+    <state width="1878" height="255" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183891" />
+    <state width="1878" height="255" key="GridCell.Tab.0.left" timestamp="1605712183891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
-    <state width="1878" height="160" key="GridCell.Tab.0.right" timestamp="1582464146873">
+    <state width="1878" height="255" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183891" />
+    <state width="1878" height="255" key="GridCell.Tab.0.right" timestamp="1605712183892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="160" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582464146873" />
-    <state x="182" y="86" width="1536" height="857" key="MergeDialog" timestamp="1582570512313">
+    <state width="1878" height="255" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183892" />
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom" timestamp="1605638837302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="182" y="86" width="1536" height="857" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570512313" />
-    <state x="671" y="238" width="567" height="557" key="MultipleFileMergeDialog" timestamp="1582570517901">
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
+    <state width="1878" height="341" key="GridCell.Tab.1.center" timestamp="1605638837302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="671" y="238" width="567" height="557" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570517901" />
-    <state x="464" y="154" key="SettingsEditor" timestamp="1582570525512">
+    <state width="1878" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
+    <state width="1878" height="341" key="GridCell.Tab.1.left" timestamp="1605638837302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582570525512" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1582570539987">
+    <state width="1878" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
+    <state width="1878" height="341" key="GridCell.Tab.1.right" timestamp="1605638837302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582570539987" />
-    <state x="682" y="313" width="555" height="406" key="git4idea.merge.GitPullDialog" timestamp="1582570448643">
+    <state width="1878" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
+    <state x="464" y="154" key="SettingsEditor" timestamp="1605707558165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="682" y="313" width="555" height="406" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582570448643" />
+    <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605707558165" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1605713818622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605713818622" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1605639259951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605639259951" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582456753009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1576264314884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1582463673071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@run_tmp.rcov" NAME="run tmp Coverage Results" MODIFIED="1596548027760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Reg.rcov" NAME="Reg Coverage Results" MODIFIED="1587845923400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582656438839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@RankingFileParser.rcov" NAME="RankingFileParser Coverage Results" MODIFIED="1596546216385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Launcher.rcov" NAME="Launcher Coverage Results" MODIFIED="1605712176866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@TestOrDebug.rcov" NAME="TestOrDebug Coverage Results" MODIFIED="1596288144214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1605638676934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>

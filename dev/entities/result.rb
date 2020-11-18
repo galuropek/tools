@@ -14,4 +14,8 @@ class Result
   def to_string
     #todo
   end
+
+  def print
+    #todo
+  end
 end

@@ -1,3 +1,5 @@
+require 'pry'
+
 module ParamsParser
 
   # params_settings example
