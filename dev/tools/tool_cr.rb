@@ -76,5 +76,3 @@ class ToolCr < BaseTool
     end
   end
 end
-
-# ToolCr.new(argv: ARGV).run
