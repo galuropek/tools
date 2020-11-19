@@ -2,9 +2,9 @@ module ToolRunner
   TOOLS_PATH = '../dev/tools/'
 
   class ToolCreator
-    def create(tool, params)
+    def create(tool)
       require_tool(tool)
-      Object.const_get(tool_to_class(tool)).new(params)
+      Object.const_get(tool_to_class(tool)).new(menu_dialog: true)
     end
 
     private
@@ -23,7 +23,7 @@ module ToolRunner
     end
   end
 
-  def create_tool(tool, params)
-    ToolCreator.new.create(tool, params)
+  def create_tool(tool)
+    ToolCreator.new.create(tool)
   end
 end

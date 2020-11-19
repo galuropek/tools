@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="Create PARA check_rrj">
-      <change afterPath="$PROJECT_DIR$/modules/tool_runner.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_or_debug.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utils.iml" afterDir="false" />
+    <list default="true" id="3e3185ed-ff0a-4e83-a883-b364d58759d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/prepare_cr_utils.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/archive/prepare_cr_tool/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/tmp.rb" beforeDir="false" afterPath="$PROJECT_DIR$/archive/tmp.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/entities/result.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/entities/result.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file_manager.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/entities/category_result.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/entities/category_result.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/tools/tool_cr.rb" beforeDir="false" afterPath="$PROJECT_DIR$/dev/tools/tool_cr.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher.rb" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/params.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/params.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/tool_runner.rb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/tool_runner.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UZrITQnE1gREwwTPAmixA8GahV" />
@@ -166,8 +165,9 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dev/tools/tool_cr.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode compare --br_sep *** --options print" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--file_path $MODULE_DIR$/../../../docs/file.csv --mode cmd --br_sep *** --option print" />
       <method v="2" />
     </configuration>
     <configuration name="Unnamed" type="RubyRunConfigurationType" factoryName="Ruby" nameIsGenerated="true">
@@ -382,6 +382,14 @@
       <workItem from="1605709194033" duration="1814000" />
       <workItem from="1605711017117" duration="1818000" />
       <workItem from="1605712912032" duration="914000" />
+      <workItem from="1605714014936" duration="128000" />
+      <workItem from="1605714163967" duration="1799000" />
+      <workItem from="1605715970009" duration="1798000" />
+      <workItem from="1605717778309" duration="642000" />
+      <workItem from="1605797859333" duration="1803000" />
+      <workItem from="1605799671699" duration="1798000" />
+      <workItem from="1605801476955" duration="1797000" />
+      <workItem from="1605803283851" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="Create ParamsParser">
       <created>1575670491865</created>
@@ -649,7 +657,28 @@
       <option name="project" value="LOCAL" />
       <updated>1605713769001</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="commit">
+      <created>1605714038640</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1605714038640</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add launcher for all tools">
+      <created>1605714090443</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1605714090443</updated>
+    </task>
+    <task id="LOCAL-00041" summary="info fo tool">
+      <created>1605714132604</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1605714132604</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,9 +697,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created new class" />
-    <MESSAGE value="Added prepare result method" />
-    <MESSAGE value="Clean prepare_cr" />
     <MESSAGE value="Common module for tools" />
     <MESSAGE value="Changes for file_manager module" />
     <MESSAGE value="Added write option for job" />
@@ -693,57 +719,60 @@
     <MESSAGE value="transfer method to module" />
     <MESSAGE value="Add read.me file" />
     <MESSAGE value="Create PARA check_rrj" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create PARA check_rrj" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="add launcher for all tools" />
+    <MESSAGE value="info fo tool" />
+    <option name="LAST_COMMIT_MESSAGE" value="info fo tool" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605638714382">
+    <state x="754" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605802424629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605638714382" />
+    <state x="754" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605802424629" />
     <state x="714" y="324" width="481" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605708756606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="324" width="481" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605708756606" />
-    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2" timestamp="1605713768899">
+    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2" timestamp="1605714132560">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605713768899" />
+    <state x="558" y="90" width="794" height="852" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605714132560" />
     <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1605631306186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605631306186" />
-    <state width="1878" height="255" key="GridCell.Tab.0.bottom" timestamp="1605712183892">
+    <state width="1878" height="224" key="GridCell.Tab.0.bottom" timestamp="1605804314934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183892" />
-    <state width="1878" height="255" key="GridCell.Tab.0.center" timestamp="1605712183891">
+    <state width="1878" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605804314934" />
+    <state width="1878" height="224" key="GridCell.Tab.0.center" timestamp="1605804314934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="255" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183891" />
-    <state width="1878" height="255" key="GridCell.Tab.0.left" timestamp="1605712183891">
+    <state width="1878" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605804314934" />
+    <state width="1878" height="224" key="GridCell.Tab.0.left" timestamp="1605804314933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="255" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183891" />
-    <state width="1878" height="255" key="GridCell.Tab.0.right" timestamp="1605712183892">
+    <state width="1878" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605804314933" />
+    <state width="1878" height="224" key="GridCell.Tab.0.right" timestamp="1605804314934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="255" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605712183892" />
-    <state width="1878" height="341" key="GridCell.Tab.1.bottom" timestamp="1605638837302">
+    <state width="1878" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605804314934" />
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom" timestamp="1605801177757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
-    <state width="1878" height="341" key="GridCell.Tab.1.center" timestamp="1605638837302">
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605801177757" />
+    <state width="1878" height="341" key="GridCell.Tab.1.center" timestamp="1605801177757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
-    <state width="1878" height="341" key="GridCell.Tab.1.left" timestamp="1605638837302">
+    <state width="1878" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605801177757" />
+    <state width="1878" height="341" key="GridCell.Tab.1.left" timestamp="1605801177757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
-    <state width="1878" height="341" key="GridCell.Tab.1.right" timestamp="1605638837302">
+    <state width="1878" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605801177757" />
+    <state width="1878" height="341" key="GridCell.Tab.1.right" timestamp="1605801177757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605638837302" />
+    <state width="1878" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605801177757" />
     <state x="464" y="154" key="SettingsEditor" timestamp="1605707558165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -752,10 +781,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605713818622" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1605639259951">
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1605803652963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605639259951" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605803652963" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tools@Run_PrepareCR_.rcov" NAME="Run PrepareCR  Coverage Results" MODIFIED="1582317728700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
@@ -763,8 +792,8 @@
     <SUITE FILE_PATH="coverage/tools@Reg.rcov" NAME="Reg Coverage Results" MODIFIED="1587845923400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
     <SUITE FILE_PATH="coverage/tools@dev_runner.rcov" NAME="dev_runner Coverage Results" MODIFIED="1582656438839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
     <SUITE FILE_PATH="coverage/tools@RankingFileParser.rcov" NAME="RankingFileParser Coverage Results" MODIFIED="1596546216385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@Launcher.rcov" NAME="Launcher Coverage Results" MODIFIED="1605712176866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@Launcher.rcov" NAME="Launcher Coverage Results" MODIFIED="1605804314922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
     <SUITE FILE_PATH="coverage/tools@TestOrDebug.rcov" NAME="TestOrDebug Coverage Results" MODIFIED="1596288144214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
-    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1605638676934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
+    <SUITE FILE_PATH="coverage/tools@ToolCR_runner.rcov" NAME="ToolCR_runner Coverage Results" MODIFIED="1605802531113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="Utils" />
   </component>
 </project>

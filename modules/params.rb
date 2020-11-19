@@ -40,7 +40,7 @@ module ParamsParser
   def param_validator(cmd)
     params = params_from_cmd(cmd)
     param_name = params.first
-    params_is_valid?(params) ? {param_name => params} : false
+    params_is_valid?(params) ? {param_name.to_sym => params.shift} : false
   end
 
   def params_is_valid?(params)
@@ -66,7 +66,7 @@ module ParamsParser
 
   def get_required_params
     required_params = []
-    @params_settings.each { |key, value| required_params << key.to_s if value.last }
+    @params_settings.each { |key, value| required_params << key.to_sym if value.last }
     required_params
   end
 

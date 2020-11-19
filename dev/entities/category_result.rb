@@ -24,7 +24,6 @@ class CategoryResult < Result
   end
 
   def do_parse_br
-    puts "Used '#{@br_sep}' br_sep for split breadcrumb!!! Please check your br_sep from input file. It affects 'breadcrumb_count' and splitted breadcrumb for comparing!!!".red
     @breadcrumb.split(@br_sep).map(&:strip)
   end
 end

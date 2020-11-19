@@ -32,8 +32,8 @@ class Launcher
     end
 
     # create and run found tool
-    argv_params = "--file_path /home/hlaushka/Documents/docs/file.csv --mode cmd --br_sep *** --options print".split
-    tool = create_tool(@tools_list[tool_index], argv_params)
+    # argv_params = "--file_path /home/hlaushka/Documents/docs/file.csv --mode cmd --br_sep *** --options print".split
+    tool = create_tool(@tools_list[tool_index])
     tool.run
   end
 
