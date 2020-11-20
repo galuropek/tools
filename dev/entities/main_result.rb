@@ -18,6 +18,10 @@ class MainResult < Result
     @result_array.count
   end
 
+  def sort_by_url
+    @result_array.sort_by { |result| result.url }
+  end
+
   def sort_by_retailer
     @result_array.sort_by! { |result| result.retailer }
   end
