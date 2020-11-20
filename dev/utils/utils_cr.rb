@@ -2,7 +2,9 @@ require_relative '../../modules/file_manager'
 require_relative '../entities/result'
 require_relative '../entities/main_result'
 require_relative '../entities/category_result'
+
 require 'json'
+require 'pry'
 
 module UtilsCR
   include FileManager
@@ -151,6 +153,28 @@ module UtilsCR
       add_line(LINE_BREAK)
     end
     @str_result
+  end
+
+  def check_url_duplicates(result)
+    duplicates_by_url = {}
+    by_url = result.sort_by_url
+
+    by_url.each_with_index do |category, index|
+      if index != by_url.count - 1
+        next_category = by_url[index + 1]
+          if category.url.eql?(next_category.url)
+            duplicates_by_url[category.url] = [] unless duplicates_by_url[category.url]
+
+            [category, next_category].each { |category| add_if_not_present(duplicates_by_url[category.url], category) }
+          end
+      end
+    end
+
+    duplicates_by_url
+  end
+
+  def add_if_not_present(cats, category)
+    cats << category unless cats.find { |cat| cat == category }
   end
 
   ##### HALPERS #####
