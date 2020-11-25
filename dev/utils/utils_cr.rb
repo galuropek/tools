@@ -3,6 +3,7 @@ require_relative '../entities/result'
 require_relative '../entities/main_result'
 require_relative '../entities/category_result'
 
+require 'colorize'
 require 'json'
 require 'pry'
 
@@ -164,17 +165,31 @@ module UtilsCR
         next_category = by_url[index + 1]
           if category.url.eql?(next_category.url)
             duplicates_by_url[category.url] = [] unless duplicates_by_url[category.url]
-
             [category, next_category].each { |category| add_if_not_present(duplicates_by_url[category.url], category) }
           end
       end
     end
 
-    duplicates_by_url
+    print_url_duplicates(duplicates_by_url) unless duplicates_by_url.empty?
   end
 
-  def add_if_not_present(cats, category)
-    cats << category unless cats.find { |cat| cat == category }
+  def print_url_duplicates(duplicates_by_url)
+    print_limit = 2
+    puts "PAY ATTENTION, PLEASE!!!\nFound duplicates by url:"
+
+    duplicates_by_url.each do |category_url, categories|
+      puts "\tcount: #{categories.count}, url: #{category_url}"
+
+      categories.each_with_index { |category, index|
+        if index > print_limit
+          puts "\t\t..."
+
+          break
+        end
+
+        puts "\t\tbreadcrumb: #{category.breadcrumb}"
+      }
+    end
   end
 
   ##### HALPERS #####
@@ -216,5 +231,9 @@ module UtilsCR
   def sort(result)
     result.sort_by_level
     result.sort_by_retailer
+  end
+
+  def add_if_not_present(cats, category)
+    cats << category unless cats.find { |cat| cat == category }
   end
 end
