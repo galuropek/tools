@@ -62,6 +62,8 @@ class ToolCr < BaseTool
       puts "Incorrect option '#{@params[:option]}', check read.me file. Has been used option 'file' by default."
       write_result(@result, @params[:mode], @params[:file_path])
     end
+
+    check_url_duplicates(@result)
   end
 
   def parse_table_for_result(table)

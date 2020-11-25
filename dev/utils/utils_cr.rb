@@ -2,7 +2,10 @@ require_relative '../../modules/file_manager'
 require_relative '../entities/result'
 require_relative '../entities/main_result'
 require_relative '../entities/category_result'
+
+require 'colorize'
 require 'json'
+require 'pry'
 
 module UtilsCR
   include FileManager
@@ -153,6 +156,42 @@ module UtilsCR
     @str_result
   end
 
+  def check_url_duplicates(result)
+    duplicates_by_url = {}
+    by_url = result.sort_by_url
+
+    by_url.each_with_index do |category, index|
+      if index != by_url.count - 1
+        next_category = by_url[index + 1]
+          if category.url.eql?(next_category.url)
+            duplicates_by_url[category.url] = [] unless duplicates_by_url[category.url]
+            [category, next_category].each { |category| add_if_not_present(duplicates_by_url[category.url], category) }
+          end
+      end
+    end
+
+    print_url_duplicates(duplicates_by_url) unless duplicates_by_url.empty?
+  end
+
+  def print_url_duplicates(duplicates_by_url)
+    print_limit = 2
+    puts "PAY ATTENTION, PLEASE!!!\nFound duplicates by url:"
+
+    duplicates_by_url.each do |category_url, categories|
+      puts "\tcount: #{categories.count}, url: #{category_url}"
+
+      categories.each_with_index { |category, index|
+        if index > print_limit
+          puts "\t\t..."
+
+          break
+        end
+
+        puts "\t\tbreadcrumb: #{category.breadcrumb}"
+      }
+    end
+  end
+
   ##### HALPERS #####
 
   # @param [Array] categories
@@ -192,5 +231,9 @@ module UtilsCR
   def sort(result)
     result.sort_by_level
     result.sort_by_retailer
+  end
+
+  def add_if_not_present(cats, category)
+    cats << category unless cats.find { |cat| cat == category }
   end
 end
