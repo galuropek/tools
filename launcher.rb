@@ -59,6 +59,7 @@ class Launcher
         Dir.entries(TOOLS_PATH)
             .select { |tool| tool.include?('.rb') }
             .map { |tool| tool.gsub('.rb', '') }
+            .reject { |tool| tool.eql?('base_tool') }
   end
 
   def print_tools_list
