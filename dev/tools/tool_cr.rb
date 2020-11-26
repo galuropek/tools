@@ -4,7 +4,7 @@ require_relative '../entities/result'
 require_relative '../entities/main_result'
 require_relative '../entities/category_result'
 require_relative '../utils/utils_cr'
-require_relative '../../base_tool'
+require_relative 'base_tool'
 
 require 'pry'
 
