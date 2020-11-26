@@ -4,4 +4,18 @@ You should prepare the scv file with "cat", "url" and "retailer"
 columns and select some options in tool menu. You can print result to
 console or save to the file. Good choice when there are 300+ CR in
 requirements.
+**********************************************************************
+    --file_path - required param - <tmp/new_folder/file.csv>
+path to prepared csv file. File should contains required "cat" and
+"url" columns and can contains optional "retailer" column.
+    --mode - required param - <job|cmd>
+job mode - prepare result for rr_job configuration;
+cmd mode - prepare result for rankings.rb tool command.
+    --br_sep - required param - <***|>|:>
+breadcrumb separator in csv file.
+    --option - required param - <file|print>
+file option - write result to csv file;
+print option - print result to console.
+    --col_sep - not required param - <"\t"|",">
+column separator for csv file, by default - "\t".
 ############ end #####################################################
