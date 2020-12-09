@@ -25,7 +25,7 @@ module FileManager
     out_path = file_path.gsub(/\.\w+$/, '_result.txt')
     file = File.open(file_path, mode)
     file.write(text)
-    close_file(file)
+    file.close
     puts "See result in:
 #{out_path}"
   end
